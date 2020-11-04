@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fase 1</title>
+</head>
+
+<body>
+    <h1>Lletres repetides</h1>
+
+
+
+
+    <script>
+        var array = ["A", "N", "N", "A"];
+        var nuevoArray = new Map();
+
+        array.map(function(letra, index, arr) {
+            if (nuevoArray.has(letra)===false)
+            //HAS en MAP
+            //El método has() devuelve un booleano indicando si el elemento con la llave especificada existe o no.
+            //si letra no esta dentro de nuevoArray...... 
+            {
+                //SET EN MAP
+                //El método set() agrega un nuevo elemento al objeto Map con la llave y el valor especificado.
+                //myMap.set(llave, valor);
+
+                nuevoArray.set(letra, 1); //afegim un valor a la llave letra
+                console.log(nuevoArray);
+
+            } else {
+                //GET en MAP
+                //El método get() devuelve un elemento específico de un objeto Map.
+                //en aquest cas, el get agafa el valor relacionat amb la lletra, i li afegeix 1. 
+                nuevoArray.set(letra, nuevoArray.get(letra) + 1);
+
+
+                console.log(nuevoArray);
+            }
+
+        });
+        console.log(array);
+        console.log(nuevoArray);
+    </script>
+
+
+
+
+</body>
+
+</html>
